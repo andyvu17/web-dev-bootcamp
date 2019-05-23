@@ -1,0 +1,14 @@
+<%include ./partials/header %>
+
+<h1>Welcome to Index Page</h1>
+
+<% cats.forEach((cat) => { %>
+    <div>
+      <h2><%= cat.name %></h2>
+      <img src="<%=cat.image%>">
+      <div><%= cat.breed %></div>
+      <p><%= cat.description %></p>
+    </div>
+<% }); %>
+
+<%include ./partials/footer %>

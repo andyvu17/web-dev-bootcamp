@@ -1,0 +1,16 @@
+<% include ./partials/header %>
+
+<h1>Index Page</h1>
+
+<% movies.forEach(function(movie){ %>
+    <div>
+        <h2><%= movie.title %></h2>
+        <img src="<%= movie.image %>">
+        <span><%= movie.created %></span>
+        <p><%= movie.plot %></p>
+        <a href="/movies/<%=movie._id%>">Read More</a>
+    </div>
+
+<% }); %>
+
+<% include ./partials/footer %>
